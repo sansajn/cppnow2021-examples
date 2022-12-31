@@ -1,0 +1,24 @@
+from pathlib import Path
+
+tracy_include = '/usr/local/include/tracy'
+
+cpp = Environment(
+	CPPPATH=[
+		Path.home()/'usr/local/include'  # concore
+	],
+	LIBS=['concore']
+)
+
+# add Tracy if installed
+if Path(tracy_include).exists():
+	cpp.AppendUnique(
+		CPPPATH=[tracy_include],
+		LIBS=['TracyClient'],
+		LIBPATH=[Path.home()/'usr/local/lib'],
+		CPPDEFINES=['TRACY_ENABLE']
+	)
+
+# build samples
+samples = Glob('*.cpp')
+for sample in samples:
+	cpp.Program(sample)

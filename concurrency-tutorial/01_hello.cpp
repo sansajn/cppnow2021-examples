@@ -1,4 +1,5 @@
 #include <concore/spawn.hpp>
+#include <cstdio>
 
 int main() {
     // Create a task and executes it
