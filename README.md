@@ -1,7 +1,7 @@
 # cppnow2021-examples
 Examples to be shown at C++Now 2021 by Lucian.
 
-To build *concurrency-tutorial* install *SCons* package with
+To build *concurrency-tutorial* samples install *SCons* package with
 
 ```bash
 sudo apt install scons
