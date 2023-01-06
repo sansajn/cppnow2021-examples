@@ -35,3 +35,9 @@
 *.sublime-project
 *.sublime-workspace
 /.qtc_clangd
+/*.includes
+/*.cxxflags
+/*.cflags
+/*.config
+/*.creator
+/*.files
